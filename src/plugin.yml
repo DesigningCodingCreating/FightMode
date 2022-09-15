@@ -1,0 +1,12 @@
+main: me.owencoding.fightmode.Main
+name: FightMode
+version: 1.0.0
+author: DesigningCodingCreating
+authors:
+  - "DesigningCodingCreating"
+  - "ninjadev64 (IGN ninjagamer64)"
+
+commands:
+  fightmode:
+    description: "Enter fight mode"
+    usage: "/fightmode"
