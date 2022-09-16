@@ -18,7 +18,7 @@ import org.bukkit.Bukkit;
 public class Main extends JavaPlugin implements CommandExecutor, Listener {
     @Override
     public void onEnable() {
-        getLogger().info("You have enabled the FightMode plugin!");
+        getLogger().info("You have enabled the FightMode plugin! :)");
         getServer().getPluginManager().registerEvents(this, this);
     }
 
