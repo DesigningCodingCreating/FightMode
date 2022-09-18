@@ -40,10 +40,11 @@ public class Main extends JavaPlugin implements CommandExecutor, Listener {
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (sender instanceof Player player) {
             if (command.getName().equalsIgnoreCase("FightMode")) {
-                player.teleport(new Location(Bukkit.getWorld("FightWorld"), 0, 5, 0));
+                player.teleport(new Location(Bukkit.getWorld("FightWorld"), 0, -59, 0));
                 player.getInventory().addItem(new ItemStack(Material.DIAMOND_SWORD));
                 player.getInventory().addItem(new ItemStack(Material.ENDER_PEARL, 16));
-
+                player.getInventory().addItem(new ItemStack(Material.RED_WOOL, 128));
+                player.getInventory().addItem(new ItemStack(Material.COOKED_MUTTON, 8));
                 player.getWorld().createExplosion(player.getLocation(), 0);
 
                 Location playerLoc = player.getLocation();
@@ -56,6 +57,9 @@ public class Main extends JavaPlugin implements CommandExecutor, Listener {
                 player.getWorld().spawnEntity(slime2, EntityType.SLIME);
                 player.getWorld().spawnEntity(slime3, EntityType.SLIME);
                 player.getWorld().spawnEntity(slime4, EntityType.SLIME);
+
+                player.setMaxHealth(500);
+                player.setHealth(100);
             }
         }
         return true;
